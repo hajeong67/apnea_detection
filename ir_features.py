@@ -4,10 +4,10 @@ import heartpy as hp
 from scipy.signal import butter, sosfiltfilt, welch
 from scipy.stats import ttest_ind
 
-SR = 100                      # 샘플레이트(Hz)
+SR = 100
 CHUNK = 12 * SR               # 12초 청크(1200샘플)
 DC_WIN_SEC = 2.0              # DC(바탕선) 이동평균 윈도우(초)
-USE_BANDPASS_FOR_DETECTION = True  # 검출용에만 0.5–8 Hz BP 적용(플롯은 AC)
+USE_BANDPASS_FOR_DETECTION = True  # 검출용 0.5–8 Hz BP 적용(플롯은 AC)
 Y_MIN, Y_MAX = -3000, 4000         # y축 고정 범위
 ALPHA = 0.1
 
@@ -242,7 +242,7 @@ def compare_groups_boxplot(df_base: pd.DataFrame, df_hold: pd.DataFrame, title='
     plt.tight_layout(rect=[0,0,1,0.96])
     save_path = os.path.join(OUT_DIR, f'{title}_boxplots.png')
     plt.savefig(save_path, dpi=200); plt.close()
-    print(f'📊 저장: {save_path}')
+    print(f'저장: {save_path}')
 
 # 실행
 if __name__ == "__main__":
@@ -273,7 +273,7 @@ if __name__ == "__main__":
     df_hold['label'] = 'holding'
     df_base.to_csv(os.path.join(OUT_DIR, f"{base_name}_features_ir.csv"), index=False)
     df_hold.to_csv(os.path.join(OUT_DIR, f"{hold_name}_features_ir.csv"), index=False)
-    print(f"✅ 유효 청크 수: baseline={len(df_base)}, holding={len(df_hold)}")
+    print(f"유효 청크 수: baseline={len(df_base)}, holding={len(df_hold)}")
 
     # 두 집단 비교 박스플롯 저장
     compare_groups_boxplot(df_base, df_hold, title='IR')
