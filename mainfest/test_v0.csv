@@ -1,0 +1,8 @@
+subject_id,baseline_csv,holding_csv,trial_id
+jeongyun,dataset/ir_jeongyun_b1.txt,dataset/ir_jeongyun_h1.txt,1
+jeongyun,dataset/ir_jeongyun_b2.txt,dataset/ir_jeongyun_h2.txt,1
+jeongyun,dataset/ir_jeongyun_b3.txt,dataset/ir_jeongyun_h3.txt,1
+
+juyeon,dataset/ir_juyeon_b1.txt,dataset/ir_juyeon_h1.txt,1
+juyeon,dataset/ir_juyeon_b2.txt,dataset/ir_juyeon_h2.txt,1
+juyeon,dataset/ir_juyeon_b3.txt,dataset/ir_juyeon_h3.txt,1
