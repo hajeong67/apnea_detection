@@ -1,11 +1,3 @@
-"""
-단일 IR CSV(value 열) → 12초 청크 → (유효성+HeartPy) PI/RMSSD → subject baseline z-score
-→ 모델 예측(유효 청크만) → 플롯:
-  - 전체 AC 파형 회색
-  - invalid(유효 아님) 청크 파란색
-  - holding(True) 청크 빨간색
-per-chunk CSV 함께 저장
-"""
 import os, re
 import numpy as np
 import pandas as pd

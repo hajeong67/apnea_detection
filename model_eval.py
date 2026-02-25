@@ -1,4 +1,3 @@
-# paper_ir/model_eval_external.py
 import os
 import numpy as np
 import pandas as pd
@@ -6,9 +5,9 @@ import joblib
 from sklearn.metrics import accuracy_score, roc_auc_score, f1_score, precision_score, recall_score
 import utils as U
 
-MODEL_PATH    = r"C:\Users\user\Desktop\ppg-transformer\ppg-transformer\paper_ir\model_version\ir_model_loso_v2.joblib"
-TEST_MANIFEST = r"C:\Users\user\Desktop\ppg-transformer\ppg-transformer\paper_ir\manifest\test_v1.csv"
-OUT_DIR       = r"C:\Users\user\Desktop\ppg-transformer\ppg-transformer\paper_ir\model_output\eval_external_loso\v2"
+MODEL_PATH    = "model/ir_model_loso_v0.joblib"
+TEST_MANIFEST = "mainfest/test_v0.csv"
+OUT_DIR       = "output"
 
 
 def load_model(model_path):

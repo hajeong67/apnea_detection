@@ -5,9 +5,8 @@ import joblib
 from sklearn.model_selection import GroupKFold
 import utils as U
 
-MANIFEST_PATH = r"C:\Users\user\Desktop\ppg-transformer\ppg-transformer\paper_ir\manifest\train_v1.csv"
-MODEL_OUT     = r"C:\Users\user\Desktop\ppg-transformer\ppg-transformer\paper_ir\model_version\ir_model_loso_v2.joblib"
-
+MANIFEST_PATH = "mainfest/train_v0.csv"
+MODEL_OUT     = "model/ir_model_loso_v0.joblib"
 # knobs
 RATIO         = 1.0
 ROBUST_ZSCORE = True
